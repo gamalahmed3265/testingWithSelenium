@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="10" passed="9" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-28T20:13:38Z" name="com.mycompany_TestMavin_jar_1.0-SNAPSHOT" finished-at="2022-12-28T20:15:02Z" duration-ms="84306">
+    <groups>
+    </groups>
+    <test started-at="2022-12-28T20:13:38Z" name="AdminTabFunctionality" finished-at="2022-12-28T20:14:32Z" duration-ms="53747">
+      <class name="com.mycompany.mavenproject1.TestMavinIT_Organized">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.mycompany.mavenproject1.TestMavinIT_Organized@635eaaf1]" started-at="2022-12-28T22:13:38Z" name="setUpClass" finished-at="2022-12-28T22:13:42Z" duration-ms="4124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="testLogin()[pri:0, instance:com.mycompany.mavenproject1.TestMavinIT_Organized@635eaaf1]" started-at="2022-12-28T22:13:42Z" name="testLogin" finished-at="2022-12-28T22:14:01Z" duration-ms="18787" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method signature="testTabAdmin()[pri:0, instance:com.mycompany.mavenproject1.TestMavinIT_Organized@635eaaf1]" started-at="2022-12-28T22:14:01Z" name="testTabAdmin" finished-at="2022-12-28T22:14:04Z" duration-ms="2831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTabAdmin -->
+        <test-method signature="closeAndOpenLeftSideBar()[pri:0, instance:com.mycompany.mavenproject1.TestMavinIT_Organized@635eaaf1]" started-at="2022-12-28T22:14:04Z" name="closeAndOpenLeftSideBar" finished-at="2022-12-28T22:14:08Z" duration-ms="4196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeAndOpenLeftSideBar -->
+        <test-method signature="systemUsers()[pri:0, instance:com.mycompany.mavenproject1.TestMavinIT_Organized@635eaaf1]" started-at="2022-12-28T22:14:08Z" name="systemUsers" finished-at="2022-12-28T22:14:15Z" duration-ms="6606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemUsers -->
+        <test-method signature="testAddUser()[pri:0, instance:com.mycompany.mavenproject1.TestMavinIT_Organized@635eaaf1]" started-at="2022-12-28T22:14:15Z" name="testAddUser" finished-at="2022-12-28T22:14:27Z" duration-ms="12666" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddUser -->
+        <test-method signature="testLogout()[pri:0, instance:com.mycompany.mavenproject1.TestMavinIT_Organized@635eaaf1]" started-at="2022-12-28T22:14:27Z" name="testLogout" finished-at="2022-12-28T22:14:29Z" duration-ms="1681" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogout -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.mycompany.mavenproject1.TestMavinIT_Organized@635eaaf1]" started-at="2022-12-28T22:14:29Z" name="tearDownClass" finished-at="2022-12-28T22:14:32Z" duration-ms="2836" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.mycompany.mavenproject1.TestMavinIT_Organized -->
+    </test> <!-- AdminTabFunctionality -->
+    <test started-at="2022-12-28T20:14:32Z" name="AdminTabFunctionality2" finished-at="2022-12-28T20:15:02Z" duration-ms="30506">
+      <class name="com.mycompany.mavenproject1.TestMavinIT_Organized">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.mycompany.mavenproject1.TestMavinIT_Organized@1dde4cb2]" started-at="2022-12-28T22:14:32Z" name="setUpClass" finished-at="2022-12-28T22:14:34Z" duration-ms="1641" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="testLogin()[pri:0, instance:com.mycompany.mavenproject1.TestMavinIT_Organized@1dde4cb2]" started-at="2022-12-28T22:14:34Z" name="testLogin" finished-at="2022-12-28T22:14:52Z" duration-ms="18727" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method signature="testTabAdmin()[pri:0, instance:com.mycompany.mavenproject1.TestMavinIT_Organized@1dde4cb2]" started-at="2022-12-28T22:14:52Z" name="testTabAdmin" finished-at="2022-12-28T22:14:55Z" duration-ms="2947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTabAdmin -->
+        <test-method signature="closeAndOpenLeftSideBar()[pri:0, instance:com.mycompany.mavenproject1.TestMavinIT_Organized@1dde4cb2]" started-at="2022-12-28T22:14:55Z" name="closeAndOpenLeftSideBar" finished-at="2022-12-28T22:15:00Z" duration-ms="4228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeAndOpenLeftSideBar -->
+        <test-method signature="testDeleteUser()[pri:0, instance:com.mycompany.mavenproject1.TestMavinIT_Organized@1dde4cb2]" started-at="2022-12-28T22:15:00Z" name="testDeleteUser" finished-at="2022-12-28T22:15:00Z" duration-ms="21" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div/div[1]/div[2]/div/div/button[1]"}
+  (Session info: chrome=108.0.5359.125)
+  (Driver info: chromedriver=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 18 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
+System info: host: 'DESKTOP-LOVDD1M', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:54070}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\gamal\AppData\Local\Temp\scoped_dir2056_252703620}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=108.0.5359.125, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: cb90821df036dcf8a0919875715501e3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div/div[1]/div[2]/div/div/button[1]"}
+  (Session info: chrome=108.0.5359.125)
+  (Driver info: chromedriver=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}),platform=Windows NT 10.0.19044 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 18 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf323ce037c5f92db6c1bba601c2ac43ad8', time: '2014-10-23 13:11:40'
+System info: host: 'DESKTOP-LOVDD1M', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:54070}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\gamal\AppData\Local\Temp\scoped_dir2056_252703620}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=108.0.5359.125, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: cb90821df036dcf8a0919875715501e3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.mycompany.mavenproject1.TestMavinIT_Organized.testDeleteUser(TestMavinIT_Organized.java:127)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteUser -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.mycompany.mavenproject1.TestMavinIT_Organized@1dde4cb2]" started-at="2022-12-28T22:15:00Z" name="tearDownClass" finished-at="2022-12-28T22:15:02Z" duration-ms="2934" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.mycompany.mavenproject1.TestMavinIT_Organized -->
+    </test> <!-- AdminTabFunctionality2 -->
+  </suite> <!-- com.mycompany_TestMavin_jar_1.0-SNAPSHOT -->
+</testng-results>

@@ -1,0 +1,4 @@
+# Created at 2022-12-28T22:13:01.835
+
+Two tests in the same suite cannot have the same name: AdminTabFunctionality
+
