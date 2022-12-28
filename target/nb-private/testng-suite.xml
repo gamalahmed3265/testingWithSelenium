@@ -1,23 +1,22 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="com.mycompany_TestMavin_jar_1.0-SNAPSHOT">
-    <test name="AdminTabFunctionality"> 
+<!--    <test name="AdminTabFunctionality"> 
         <classes>  
             <class name="com.mycompany.mavenproject1.TestMavinIT_Organized">
                 <methods>
-                    <!--<include name="testForgotPasswordPage"/>-->
+                    <include name="testForgotPasswordPage"/>
                     <include name="testLogin"/>
                     <include name="testTabAdmin"/>
                     <include name="closeAndOpenLeftSideBar"/>
-                    <!--<include name="testDeleteUser"/>-->
                     <include name="systemUsers"/>
                     <include name="testAddUser"/>
                     <include name="testLogout"/>
                 </methods>
             </class>
         </classes>  
-    </test>
-    <test name="AdminTabFunctionality2"> 
+    </test>-->
+    <test name="AdminTabFunctionalityEditUser"> 
         <classes>  
             <class name="com.mycompany.mavenproject1.TestMavinIT_Organized">
                 <methods>
@@ -25,12 +24,13 @@
                     <include name="testLogin"/>
                     <include name="testTabAdmin"/>
                     <include name="closeAndOpenLeftSideBar"/>
-                    <include name="testDeleteUser"/>
-<!--                    <include name="systemUsers"/>
+                    <!--<include name="testEditUser"/>-->
+                    <!--<include name="testTabToggle"/>-->
                     <include name="testAddUser"/>
-                    <include name="testLogout"/>-->
+                    <include name="testLogout"/>
                 </methods>
             </class>
         </classes>  
     </test>
+
 </suite>

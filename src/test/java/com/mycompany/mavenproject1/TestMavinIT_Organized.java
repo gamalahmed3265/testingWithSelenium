@@ -64,13 +64,14 @@ public class TestMavinIT_Organized {
 
     }
 
-    @Test
-    public void testLogin() throws Exception {
+//    @Test
+    @Test(dataProvider = "adminDataProvider")
+    public void testLogin(UserData userData) throws Exception {
 
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         Thread.sleep(1000);
-        driver.findElement(By.name("username")).sendKeys("Admin");
-        driver.findElement(By.name("password")).sendKeys("admin123");
+        driver.findElement(By.name("username")).sendKeys(userData.getUserName());
+        driver.findElement(By.name("password")).sendKeys(userData.getPassword());
         driver.findElement(By.className("orangehrm-login-button")).click();
         Thread.sleep(3000);
         Assert.assertTrue(driver.findElement(By.className("oxd-userdropdown-name")).isDisplayed());
@@ -89,14 +90,14 @@ public class TestMavinIT_Organized {
     @Test
     public void systemUsers() throws Exception {
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/input")).sendKeys("Admin");
-        
+
         //User Role
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div[1]/div[1]")).click();
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/div/div[2]/div[2]")).click();
-        
+
         //Employee Name
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div/input")).sendKeys("Odis  Adalwin");
-        
+
         //Status
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[4]/div/div[2]/div/div/div[1]")).click();
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[4]/div/div[2]/div/div[2]/div[3]")).click();
@@ -121,69 +122,71 @@ public class TestMavinIT_Organized {
         Thread.sleep(2000);
         assertTrue(driver.findElement(By.className("bi-chevron-left")).isDisplayed());
     }
+
     @Test
     public void testDeleteUser() throws Exception {
 
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div/div[1]/div[2]/div/div/button[1]")).click();
         Thread.sleep(2000);
         assertTrue(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div/div[1]/div[2]/div/div/button[1]")).isDisplayed());
-         Thread.sleep(2000);
+        Thread.sleep(2000);
     }
-    @Test
-    public void testAddUser() throws Exception {
-        
-        
+
+//    @Test
+    @Test(dataProvider = "userDataProvider")
+    public void testAddUser(UserData userData) throws Exception {
+
+//        UserData userData = userDataProvider();
+
         //click Add button
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[1]/button")).click();
-        
+
         Thread.sleep(2000);
-        
+
         // user Role
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div/div[2]")).click();
 //        assertTrue(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div/div[2]")).isDisplayed());
-        
+
         Thread.sleep(1000);
-        
+
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[2]")).click();
 //        assertTrue(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[2]")).isDisplayed());
-        
-//        Thread.sleep(2000);
 
+//        Thread.sleep(2000);
         //Employee Name
 //        driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/div/div[2]/div/div/div[1]")).click();
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/div/div[2]/div/div/input")).sendKeys("karuna sri bale");
 //        assertTrue(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/div/div[2]/div/div/input")).isDisplayed());
-        
+
         //status
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[3]/div/div[2]/div/div/div[2]")).click();
 //        assertTrue(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div/div[2]")).isDisplayed());
-        
+
         Thread.sleep(1000);
-        
+
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[3]/div/div[2]/div/div[2]/div[2]")).click();
 //        assertTrue(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div[2]/div[2]")).isDisplayed());
-        
+
         Thread.sleep(2000);
-        
+
         //username
-        driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[4]/div/div[2]/input")).sendKeys("Gamal");
-        
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[4]/div/div[2]/input")).sendKeys(userData.getUserName());
+
         //password 1
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[1]/div/div[2]")).click();
-        driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[1]/div/div[2]/input")).sendKeys("0u9@&4SbxNSZ");
-        
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[1]/div/div[2]/input")).sendKeys(userData.getPassword());
+
         //password 2
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[2]/div/div[2]")).click();
-        driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[2]/div/div[2]/input")).sendKeys("0u9@&4SbxNSZ");
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[2]/div/div[2]/input")).sendKeys(userData.getPassword());
         Thread.sleep(2000);
-        
+
         //save button
         driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[3]/button[2]")).click();
         Thread.sleep(3000);
 
 //        assertTrue(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/div/div[2]/div/div/input")).isDisplayed());
 //        Assert.assertEquals(driver.findElement(By.className("(//input[@class='oxd-input oxd-input--active'])[3]")).getText(),"admin123");
-
 //                Assert.assertEquals(driver.findElement(By.className("(//input[@class='oxd-input oxd-input--active'])[2]")).getText(),"admin123");
 //        Assert.assertEquals(driver.findElement(By.className("(//input[@class='oxd-input oxd-input--active'])[2]")).getText(),"admin123");
 //        driver.findElement(By.name("username")).sendKeys("Admin");
@@ -208,10 +211,10 @@ public class TestMavinIT_Organized {
 //        }
     }
 
-//    @Test(dataProvider = "sideBarDataProvider")
-    @Test
-    public void testTabToggle() throws Exception {
-        List<SideBar> listSideBar = sideBarDataProvider();
+//    @Test
+    @Test(dataProvider = "sideBarDataProvider")
+    public void testTabToggle(SideBar sideBar) throws Exception {
+//        List<SideBar> listSideBar = sideBarDataProvider();
 //        for (int i = 0; i < listSideBar.size(); i++) {
 //            Thread.sleep(5000);
 //            System.out.println("name: " + listSideBar.get(i).getName());
@@ -222,45 +225,58 @@ public class TestMavinIT_Organized {
 //            Thread.sleep(5000);
         //                    driver.findElement(By.cssSelector(".oxd-main-menu-item[href='/web/index.php/pim/viewMyDetails']")).click();
 
-        driver.findElement(By.cssSelector(".oxd-main-menu-item[href='" + listSideBar.get(4).getLink() + "']")).click();
+        driver.findElement(By.cssSelector(".oxd-main-menu-item[href='" + sideBar.getLink() + "']")).click();
         Thread.sleep(2000);
         assertTrue(driver.findElement(By.className("oxd-userdropdown-name")).isDisplayed());
 
     }
- @Test
+
+    @Test
     public void testLogout() throws Exception {
         driver.findElement(By.className("oxd-userdropdown-name")).click();
         driver.findElement(By.cssSelector(".oxd-userdropdown-link[href='/web/index.php/auth/logout']")).click();
     }
-    
-//    @DataProvider(name = "sideBarDataProvider")
-    public List<SideBar> sideBarDataProvider() {
-        List<SideBar> listSideBar = new ArrayList<SideBar>();
 
-        listSideBar.add(new SideBar("Buzz", "web/index.php/buzz/viewBuzz"));
-        listSideBar.add(new SideBar("Maintenance", "/web/index.php/maintenance/viewMaintenanceModule"));
-        listSideBar.add(new SideBar("Directory", "/web/index.php/directory/viewDirectory"));
-        listSideBar.add(new SideBar("Dashboard", "/web/index.php/dashboard/index"));
-        listSideBar.add(new SideBar("Performance", "/web/index.php/performance/viewPerformanceModule"));
+    @Test
 
-        listSideBar.add(new SideBar("My Info", "/web/index.php/pim/viewMyDetails"));
-        listSideBar.add(new SideBar("Recruitment", "/web/index.php/recruitment/viewRecruitmentModule"));
-        listSideBar.add(new SideBar("Time", "/web/index.php/time/viewTimeModule"));
-        listSideBar.add(new SideBar("Leave", "/web/index.php/leave/viewLeaveModule"));
-        listSideBar.add(new SideBar("PIM", "/web/index.php/pim/viewPimModule"));
-
-        listSideBar.add(new SideBar("Admin", "/web/index.php/admin/viewAdminModule"));
-
-        return listSideBar;
+    public void testEditUser() throws Exception {
+        //
+        assertTrue(driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div/div[4]/div/div/div[1]/div[2]/div/div/button[2]")).isDisplayed());
+        driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div/div[4]/div/div/div[1]/div[2]/div/div/button[2]")).click();
+        Thread.sleep(2000);
     }
 
-//    @DataProvider(name = "userDataProvider")
-    public UserData userDataProvider() {
-        UserData user = new UserData("Admin", "admin123");
-        return user;
+    @DataProvider(name = "sideBarDataProvider")
+    public Object[] sideBarDataProvider() {
+        return new Object[]
+            {
+                new SideBar("Buzz", "web/index.php/buzz/viewBuzz"),
+                new SideBar("Maintenance", "/web/index.php/maintenance/viewMaintenanceModule"),
+                new SideBar("Directory", "/web/index.php/directory/viewDirectory"),
+                new SideBar("Dashboard", "/web/index.php/dashboard/index"),
+                new SideBar("Performance", "/web/index.php/performance/viewPerformanceModule"),
+                new SideBar("My Info", "/web/index.php/pim/viewMyDetails"),
+                new SideBar("Recruitment", "/web/index.php/recruitment/viewRecruitmentModule"),
+                new SideBar("Time", "/web/index.php/time/viewTimeModule"),
+                new SideBar("Leave", "/web/index.php/leave/viewLeaveModule"),
+                new SideBar("PIM", "/web/index.php/pim/viewPimModule"),
+                new SideBar("Admin", "/web/index.php/admin/viewAdminModule"),};
     }
 
-   
+    @DataProvider(name = "userDataProvider")
+    public Object[][] userDataProvider() {
+     return new Object[][]{{
+//            new UserData("Mohamed", "0u9@&4SbxNSZ"),
+//            new UserData("Gamal", "0u9@&4SbxNSZ"),
+            new UserData("Ahmed", "0u9@&4SbxNSZ")
+        }};
+    }
+    @DataProvider(name = "adminDataProvider")
+    public Object[][] adminDataProvider() {
+     return new Object[][]{{
+            new UserData("Admin", "admin123")
+        }};
+    }
 
     public static void screenShot(String filename) {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
